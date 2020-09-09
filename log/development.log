@@ -73,3 +73,4 @@ No template found for PostsController#create, rendering head :no_content
 Completed 204 No Content in 108ms (ActiveRecord: 35.4ms)
 
 
+Started GET "/posts/new" for 71.197.15.109 at 2020-09-09 18:49:32 +0000
