@@ -81,3 +81,19 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 541ms (Views: 445.2ms | ActiveRecord: 5.6ms)
 
 
+Started POST "/posts" for 71.197.15.109 at 2020-09-09 18:49:45 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CO7ZFPUx90GZSN3kn00Vzd9XRu+Y/gB0N4P3bEZG/ks4hH4x4QySLqXVJMTTIGHy19vrdY8OvWtHCJB1Qh+rWQ==", "title"=>"New Post", "description"=>"This is a new post!", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "New Post"], ["description", "This is a new post!"], ["created_at", "2020-09-09 18:49:45.716083"], ["updated_at", "2020-09-09 18:49:45.716083"]]
+  [1m[35m (49.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://67.205.188.72:44906/posts/3
+Completed 302 Found in 68ms (ActiveRecord: 50.6ms)
+
+
+Started GET "/posts/3" for 71.197.15.109 at 2020-09-09 18:49:45 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
